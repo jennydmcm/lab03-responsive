@@ -12,11 +12,10 @@
    ========================================================================== */
 
    html {
-      color: #222;
-      font-family: Ubuntu, Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 1em;
-      line-height: 1.4;
-     
+    color: #222;
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.4;
     }
     
     /*
@@ -98,6 +97,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      font-size: 0.8rem;
     }
     /* ==========================================================================
        LAYOUT
@@ -112,7 +112,10 @@
         row-gap: 1rem;
         margin: 0 1rem 3rem 1rem;
      }
-
+        .row-no-margin {
+          margin: 0 !important;
+        }
+        
        .column {
         position: relative;
        }
@@ -161,6 +164,7 @@
       figcaption > h3 {
         color: white;
       }
+
       /* main nav mobile first */
       .main-nav{
         display: none;
@@ -242,14 +246,11 @@
       
       @media screen and (min-width: 40em) {
          .row {
-            display: grid;
             width: 85vw;
             max-width: 70rem;
-            margin: 0 auto;
-            row-gap: 1.5rem;
             column-gap: 1.5rem;
+            row-gap: 1.5rem;
             margin: 0 auto;
-
          }
 
          .sub-grid{
@@ -269,7 +270,9 @@
          }
          .m-col-5 {
             grid-template-columns: repeat(5, 1fr);
+            margin-bottom: 2em;
          }
+         
          .m-1-2{
           grid-template-columns: 1fr 2fr;
          }
@@ -277,10 +280,6 @@
          .span-full {
             grid-column-start: 1;
             grid-column-end: -1;
-         }
-
-         .m-1-2 {
-            grid-template-columns: 1fr 2fr;
          }
 
          .main-nav{
@@ -318,7 +317,7 @@
       
       /* Large and up */
 
-      @media screen and (min-width: 64em) {
+      @media screen and (min-width: 63.9375em) {
 
          .l-col-2 {
             grid-template-columns: 1fr 1fr;
@@ -332,6 +331,9 @@
          .l-col-5 {
             grid-template-columns: repeat(5, 1fr);
          } 
+         .l-col-6 {
+          grid-template-columns: repeat(6, 1fr);
+       } 
          .l-hide{
           display: none;
         }
@@ -395,6 +397,12 @@
 
        .page__footer{
          background-color: #222;
+       }
+
+       .page__footer .row {
+        background-color: url(img/bg_colourbar.png);
+        background-repeat: no-repeat;
+        background-position: bottom right;
        }
 
        .inverted{
